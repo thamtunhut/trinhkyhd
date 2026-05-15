@@ -25,15 +25,7 @@
   header {
     border-bottom: 1px solid #D9D2C0;
     padding-bottom: 28px;
-    margin-bottom: 48px;
-  }
-  .eyebrow {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    color: #8A7B4F;
-    margin: 0 0 12px;
+    margin-bottom: 36px;
   }
   h1 {
     font-family: 'Lora', Georgia, serif;
@@ -83,10 +75,28 @@
   p { margin: 0 0 12px; }
   strong { color: #1A1A18; font-weight: 600; }
   em { color: #66645F; font-style: italic; }
-  ul { margin: 8px 0 0; padding-left: 22px; }
-  ul li { margin-bottom: 4px; }
+  ul, ol { margin: 8px 0 0; padding-left: 22px; }
+  ul li, ol li { margin-bottom: 4px; }
 
-  /* Case cards */
+  .scope-box {
+    background: #FFFBF2;
+    border: 1px solid #D9D2C0;
+    border-radius: 10px;
+    padding: 20px 24px 16px;
+    margin-bottom: 12px;
+  }
+  .scope-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #8A7B4F;
+    margin-bottom: 10px;
+  }
+  .scope-box p { margin: 0 0 6px; color: #5F5E55; font-size: 15px; }
+  .scope-box ol { margin: 0; padding-left: 20px; }
+  .scope-box ol li { margin-bottom: 4px; font-size: 15px; }
+
   .case-card {
     padding: 18px 22px;
     margin: 14px 0;
@@ -109,7 +119,6 @@
   .case-2 .label { color: #185FA5; }
   .case-3 .label { color: #993C1D; }
 
-  /* Principles */
   .principle {
     display: flex;
     gap: 18px;
@@ -133,7 +142,6 @@
   .principle-body { flex: 1; }
   .principle-title { font-weight: 600; color: #1A1A18; margin-bottom: 4px; }
 
-  /* Diagrams */
   .diagram-wrap {
     margin: 32px 0;
     padding: 28px 20px 20px;
@@ -149,7 +157,6 @@
     margin: 0 auto;
   }
 
-  /* SVG node ramps */
   .n-gray rect { fill: #F1EFE8; stroke: #5F5E5A; }
   .n-gray .th { fill: #444441; }
   .n-gray .ts { fill: #5F5E5A; }
@@ -168,38 +175,10 @@
   .n-green rect { fill: #EAF3DE; stroke: #3B6D11; }
   .n-green .th { fill: #27500A; }
   .n-green .ts { fill: #3B6D11; }
-  .th {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  .ts {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-  }
-  .label-text {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    fill: #66645F;
-  }
-  .arr {
-    fill: none;
-    stroke: #66645F;
-    stroke-width: 1;
-  }
-
-  /* Note */
-  .footnote {
-    margin-top: 64px;
-    padding: 18px 22px;
-    background: #F1EBDB;
-    border-radius: 8px;
-    font-size: 14px;
-    color: #66645F;
-  }
-  .footnote strong { color: #1A1A18; }
+  .th { font-family: 'Be Vietnam Pro', sans-serif; font-size: 14px; font-weight: 500; }
+  .ts { font-family: 'Be Vietnam Pro', sans-serif; font-size: 12px; font-weight: 400; }
+  .label-text { font-family: 'Be Vietnam Pro', sans-serif; font-size: 12px; font-weight: 500; fill: #66645F; }
+  .arr { fill: none; stroke: #66645F; stroke-width: 1; }
 
   @media (max-width: 720px) {
     .container { padding: 40px 24px 64px; }
@@ -211,7 +190,7 @@
     body { background: #fff; }
     .container { padding: 24px; max-width: 100%; }
     .diagram-wrap { page-break-inside: avoid; border-color: #ddd; }
-    .case-card, .footnote { box-shadow: none; }
+    .case-card { box-shadow: none; }
   }
 </style>
 </head>
@@ -219,60 +198,68 @@
 <div class="container">
 
 <header>
-<h1>Quy trình trình ký Hợp đồng và Chứng từ</h1>
+  <h1>Quy trình trình ký Hợp đồng và Chứng từ</h1>
   <p class="lede">Hướng dẫn xử lý việc trình ký cho Anh Kelly trong các tình huống thông thường và khi PIC dí gấp cần duyệt HĐ trước khi triển khai job.</p>
 </header>
+
+<div class="scope-box">
+  <div class="scope-title">Phạm vi áp dụng</div>
+  <p>Anh Kelly ký các loại hợp đồng sau:</p>
+  <ol>
+    <li>Hợp đồng <strong>VNG Group JSC</strong> có giá trị trên <strong>1,2 tỷ đồng</strong></li>
+    <li>Hợp đồng <strong>VNG Singapore PTE.LTD</strong> và <strong>VNGGames Singapore</strong></li>
+  </ol>
+</div>
 
 <section>
   <h2><span class="num">1</span>Quy trình trình ký cho Anh Kelly</h2>
   <p>Có 3 trường hợp tùy theo Anh Kelly có ở văn phòng hay đang công tác, và mức độ gấp của chứng từ.</p>
 
   <div class="diagram-wrap">
-    <svg viewBox="0 0 680 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ quy trình trình ký cho Anh Kelly">
+    <svg viewBox="0 0 720 710" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ quy trình trình ký cho Anh Kelly">
       <defs>
         <marker id="arrow1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M2 1L8 5L2 9" fill="none" stroke="#66645F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </marker>
       </defs>
-      <g class="n-gray"><rect x="240" y="24" width="200" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="46" text-anchor="middle" dominant-baseline="central">Trình ký HĐ/chứng từ</text></g>
-      <line x1="340" y1="68" x2="340" y2="96" class="arr" marker-end="url(#arrow1)"/>
-      <g class="n-amber"><rect x="240" y="100" width="200" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="122" text-anchor="middle" dominant-baseline="central">Anh Kelly có ở VP?</text></g>
-      <path d="M340 144 L340 170 L130 170 L130 192" class="arr" marker-end="url(#arrow1)"/>
-      <path d="M340 144 L340 170 L540 170 L540 192" class="arr" marker-end="url(#arrow1)"/>
-      <text class="label-text" x="220" y="164" text-anchor="middle">Có</text>
-      <text class="label-text" x="450" y="164" text-anchor="middle">Đi công tác</text>
+      <g class="n-gray"><rect x="260" y="24" width="200" height="44" rx="8" stroke-width="0.5"/><text class="th" x="360" y="46" text-anchor="middle" dominant-baseline="central">Trình ký HĐ/chứng từ</text></g>
+      <line x1="360" y1="68" x2="360" y2="96" class="arr" marker-end="url(#arrow1)"/>
+      <g class="n-amber"><rect x="260" y="100" width="200" height="44" rx="8" stroke-width="0.5"/><text class="th" x="360" y="122" text-anchor="middle" dominant-baseline="central">Anh Kelly có ở VP?</text></g>
+      <path d="M360 144 L360 168 L120 168 L120 192" class="arr" marker-end="url(#arrow1)"/>
+      <path d="M360 144 L360 168 L540 168 L540 192" class="arr" marker-end="url(#arrow1)"/>
+      <text class="label-text" x="230" y="162" text-anchor="middle">Có</text>
+      <text class="label-text" x="460" y="162" text-anchor="middle">Đi công tác</text>
 
-      <g class="n-teal"><rect x="40" y="194" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="130" y="214" text-anchor="middle" dominant-baseline="central">Check chị Vy PT2</text><text class="ts" x="130" y="234" text-anchor="middle" dominant-baseline="central">Mai Anh Kelly có lên ký?</text></g>
-      <line x1="130" y1="250" x2="130" y2="278" class="arr" marker-end="url(#arrow1)"/>
-      <g class="n-teal"><rect x="40" y="280" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="130" y="300" text-anchor="middle" dominant-baseline="central">Nộp chứng từ</text><text class="ts" x="130" y="320" text-anchor="middle" dominant-baseline="central">Cho chị Vy PT2</text></g>
-      <line x1="130" y1="336" x2="130" y2="364" class="arr" marker-end="url(#arrow1)"/>
-      <g class="n-green"><rect x="40" y="366" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="130" y="388" text-anchor="middle" dominant-baseline="central">Nhận lại hôm sau</text></g>
+      <g class="n-teal"><rect x="30" y="194" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="120" y="214" text-anchor="middle" dominant-baseline="central">Check chị VyPT2</text><text class="ts" x="120" y="234" text-anchor="middle" dominant-baseline="central">Mai Anh Kelly có lên ký?</text></g>
+      <line x1="120" y1="250" x2="120" y2="278" class="arr" marker-end="url(#arrow1)"/>
+      <g class="n-teal"><rect x="30" y="280" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="120" y="300" text-anchor="middle" dominant-baseline="central">Nộp chứng từ</text><text class="ts" x="120" y="320" text-anchor="middle" dominant-baseline="central">Cho chị VyPT2</text></g>
+      <line x1="120" y1="336" x2="120" y2="364" class="arr" marker-end="url(#arrow1)"/>
+      <g class="n-green"><rect x="30" y="366" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="120" y="388" text-anchor="middle" dominant-baseline="central">Nhận lại hôm sau</text></g>
 
       <g class="n-amber"><rect x="430" y="194" width="220" height="44" rx="8" stroke-width="0.5"/><text class="th" x="540" y="216" text-anchor="middle" dominant-baseline="central">Cần Anh Kelly ký gấp?</text></g>
-      <path d="M540 238 L540 262 L370 262 L370 286" class="arr" marker-end="url(#arrow1)"/>
-      <path d="M540 238 L540 262 L590 262 L590 286" class="arr" marker-end="url(#arrow1)"/>
-      <text class="label-text" x="455" y="256" text-anchor="middle">Không</text>
-      <text class="label-text" x="605" y="278" text-anchor="start">Gấp</text>
+      <path d="M540 238 L540 262 L350 262 L350 286" class="arr" marker-end="url(#arrow1)"/>
+      <path d="M540 238 L540 262 L600 262 L600 286" class="arr" marker-end="url(#arrow1)"/>
+      <text class="label-text" x="445" y="256" text-anchor="middle">Không</text>
+      <text class="label-text" x="615" y="278" text-anchor="start">Gấp</text>
 
-      <g class="n-blue"><rect x="280" y="288" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="370" y="308" text-anchor="middle" dominant-baseline="central">Mail tới Anh Kelly</text><text class="ts" x="370" y="328" text-anchor="middle" dominant-baseline="central">Approve qua mail</text></g>
-      <line x1="370" y1="344" x2="370" y2="372" class="arr" marker-end="url(#arrow1)"/>
-      <g class="n-green"><rect x="280" y="374" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="370" y="396" text-anchor="middle" dominant-baseline="central">Chị Vy PT2 ký mộc</text></g>
+      <g class="n-blue"><rect x="260" y="288" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="350" y="308" text-anchor="middle" dominant-baseline="central">Mail tới Anh Kelly</text><text class="ts" x="350" y="328" text-anchor="middle" dominant-baseline="central">Approve qua mail</text></g>
+      <line x1="350" y1="344" x2="350" y2="372" class="arr" marker-end="url(#arrow1)"/>
+      <g class="n-green"><rect x="260" y="374" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="350" y="396" text-anchor="middle" dominant-baseline="central">Chị VyPT2 ký mộc</text></g>
 
-      <g class="n-coral"><rect x="500" y="288" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="590" y="308" text-anchor="middle" dominant-baseline="central">PIC mail DH</text><text class="ts" x="590" y="328" text-anchor="middle" dominant-baseline="central">Giải trình lý do gấp</text></g>
-      <line x1="590" y1="344" x2="590" y2="372" class="arr" marker-end="url(#arrow1)"/>
-      <g class="n-amber"><rect x="500" y="374" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="590" y="396" text-anchor="middle" dominant-baseline="central">DH approve?</text></g>
+      <g class="n-coral"><rect x="510" y="288" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="600" y="308" text-anchor="middle" dominant-baseline="central">PIC mail DH</text><text class="ts" x="600" y="328" text-anchor="middle" dominant-baseline="central">Giải trình lý do gấp</text></g>
+      <line x1="600" y1="344" x2="600" y2="372" class="arr" marker-end="url(#arrow1)"/>
+      <g class="n-amber"><rect x="510" y="374" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="600" y="396" text-anchor="middle" dominant-baseline="central">DH approve?</text></g>
+      <path d="M510 396 L490 396 L490 460 L452 460" class="arr" marker-end="url(#arrow1)"/>
+      <text class="label-text" x="484" y="428" text-anchor="end">Không</text>
+      <line x1="600" y1="418" x2="600" y2="446" class="arr" marker-end="url(#arrow1)"/>
+      <text class="label-text" x="616" y="434" text-anchor="start">Có</text>
+      <g class="n-gray"><rect x="312" y="440" width="140" height="44" rx="8" stroke-width="0.5"/><text class="th" x="382" y="462" text-anchor="middle" dominant-baseline="central">Tạm hoãn</text></g>
 
-      <path d="M500 396 L470 396 L470 462 L432 462" class="arr" marker-end="url(#arrow1)"/>
-      <text class="label-text" x="485" y="430" text-anchor="start">Không</text>
-      <line x1="590" y1="418" x2="590" y2="446" class="arr" marker-end="url(#arrow1)"/>
-      <text class="label-text" x="608" y="434" text-anchor="start">Có</text>
-      <g class="n-gray"><rect x="290" y="440" width="140" height="44" rx="8" stroke-width="0.5"/><text class="th" x="360" y="462" text-anchor="middle" dominant-baseline="central">Tạm hoãn</text></g>
-
-      <g class="n-blue"><rect x="500" y="448" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="590" y="468" text-anchor="middle" dominant-baseline="central">Mail tới Anh Kelly</text><text class="ts" x="590" y="488" text-anchor="middle" dominant-baseline="central">Giải trình tương tự</text></g>
-      <line x1="590" y1="504" x2="590" y2="532" class="arr" marker-end="url(#arrow1)"/>
-      <g class="n-blue"><rect x="500" y="534" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="590" y="554" text-anchor="middle" dominant-baseline="central">Anh Kelly approve</text><text class="ts" x="590" y="574" text-anchor="middle" dominant-baseline="central">Qua email giải trình</text></g>
-      <line x1="590" y1="590" x2="590" y2="618" class="arr" marker-end="url(#arrow1)"/>
-      <g class="n-green"><rect x="500" y="620" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="590" y="642" text-anchor="middle" dominant-baseline="central">Chị Vy PT2 ký mộc</text></g>
+      <g class="n-blue"><rect x="510" y="448" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="600" y="468" text-anchor="middle" dominant-baseline="central">Mail tới Anh Kelly</text><text class="ts" x="600" y="488" text-anchor="middle" dominant-baseline="central">Giải trình tương tự</text></g>
+      <line x1="600" y1="504" x2="600" y2="532" class="arr" marker-end="url(#arrow1)"/>
+      <g class="n-blue"><rect x="510" y="534" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="600" y="554" text-anchor="middle" dominant-baseline="central">Anh Kelly approve</text><text class="ts" x="600" y="574" text-anchor="middle" dominant-baseline="central">Qua email giải trình</text></g>
+      <line x1="600" y1="590" x2="600" y2="618" class="arr" marker-end="url(#arrow1)"/>
+      <g class="n-green"><rect x="510" y="620" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="600" y="642" text-anchor="middle" dominant-baseline="central">Chị VyPT2 ký mộc</text></g>
     </svg>
   </div>
 
@@ -280,17 +267,17 @@
 
   <div class="case-card case-1">
     <div class="label">TH1 · Anh Kelly có mặt tại văn phòng</div>
-    Check trước với chị Vy PT2 xem hôm sau Anh Kelly có lên văn phòng để ký không. Nộp chứng từ cho chị Vy → nhận lại sau 1 ngày.
+    Check trước với chị VyPT2 xem hôm sau Anh Kelly có lên văn phòng để ký không. Nộp chứng từ cho chị VyPT2 → nhận lại sau 1 ngày.
   </div>
 
   <div class="case-card case-2">
     <div class="label">TH2 · Anh Kelly đi công tác, không gấp</div>
-    Xác định trước Anh Kelly đi bao lâu, có chờ được không. Nếu không chờ được, admin CTS mail Anh Kelly approve theo văn phong bình thường — nội dung kiểu <em>"em có bộ chứng từ về HĐ, nghiệm thu job... cần Anh approve để chị Vy PT2 ký mộc"</em>. Sau khi approve qua mail → chị Vy ký mộc.
+    Xác định trước Anh Kelly đi bao lâu, có chờ được không. Nếu không chờ được, admin CTS mail Anh Kelly approve theo văn phong bình thường — nội dung kiểu <em>"em có bộ chứng từ về HĐ, nghiệm thu job... cần Anh approve để chị VyPT2 ký mộc"</em>. Sau khi approve qua mail → chị VyPT2 ký mộc.
   </div>
 
   <div class="case-card case-3">
     <div class="label">TH3 · Cần Anh Kelly ký gấp</div>
-    PIC viết mail Dept Head (DH) <strong>giải trình lý do gấp</strong> trước. DH approve → admin viết mail gửi Anh Kelly với nội dung giải trình tương tự → Anh Kelly approve qua email → chị Vy ký mộc. Nếu DH không approve thì tạm hoãn hoặc tìm phương án khác.
+    PIC viết mail cho Dept Head (DH) để <strong>giải trình lý do gấp</strong> trước. DH approve → admin viết mail gửi Anh Kelly với nội dung giải trình tương tự → Anh Kelly approve qua email → chị VyPT2 ký mộc. Nếu DH không approve thì tạm hoãn hoặc tìm phương án khác.
   </div>
 </section>
 
@@ -299,37 +286,37 @@
   <p>Áp dụng khi PIC cần duyệt HĐ gấp để kịp triển khai job — phụ thuộc vào timeline và mức độ chịu chờ của agency.</p>
 
   <div class="diagram-wrap">
-    <svg viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ xử lý khi PIC dí HĐ trước khi thực hiện">
+    <svg viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sơ đồ xử lý khi PIC dí HĐ trước khi thực hiện">
       <defs>
         <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M2 1L8 5L2 9" fill="none" stroke="#66645F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </marker>
       </defs>
-      <g class="n-gray"><rect x="250" y="24" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="340" y="44" text-anchor="middle" dominant-baseline="central">PIC cần duyệt HĐ</text><text class="ts" x="340" y="64" text-anchor="middle" dominant-baseline="central">Trước khi thực hiện</text></g>
-      <line x1="340" y1="80" x2="340" y2="108" class="arr" marker-end="url(#arrow2)"/>
-      <g class="n-amber"><rect x="220" y="110" width="240" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="132" text-anchor="middle" dominant-baseline="central">Đã gửi HĐ ≥ 7 ngày?</text></g>
-      <path d="M340 154 L340 178 L130 178 L130 198" class="arr" marker-end="url(#arrow2)"/>
-      <path d="M340 154 L340 178 L540 178 L540 198" class="arr" marker-end="url(#arrow2)"/>
-      <text class="label-text" x="220" y="172" text-anchor="middle">Có</text>
-      <text class="label-text" x="460" y="172" text-anchor="middle">Không</text>
+      <g class="n-gray"><rect x="270" y="24" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="360" y="44" text-anchor="middle" dominant-baseline="central">PIC cần duyệt HĐ</text><text class="ts" x="360" y="64" text-anchor="middle" dominant-baseline="central">Trước khi thực hiện</text></g>
+      <line x1="360" y1="80" x2="360" y2="108" class="arr" marker-end="url(#arrow2)"/>
+      <g class="n-amber"><rect x="240" y="110" width="240" height="44" rx="8" stroke-width="0.5"/><text class="th" x="360" y="132" text-anchor="middle" dominant-baseline="central">Đã gửi HĐ ≥ 10 ngày?</text></g>
+      <path d="M360 154 L360 178 L120 178 L120 198" class="arr" marker-end="url(#arrow2)"/>
+      <path d="M360 154 L360 178 L560 178 L560 198" class="arr" marker-end="url(#arrow2)"/>
+      <text class="label-text" x="230" y="172" text-anchor="middle">Có</text>
+      <text class="label-text" x="470" y="172" text-anchor="middle">Không</text>
 
-      <g class="n-teal"><rect x="40" y="200" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="130" y="220" text-anchor="middle" dominant-baseline="central">Process duyệt</text><text class="ts" x="130" y="240" text-anchor="middle" dominant-baseline="central">Qua các round duyệt</text></g>
-      <line x1="130" y1="256" x2="130" y2="284" class="arr" marker-end="url(#arrow2)"/>
-      <g class="n-green"><rect x="40" y="286" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="130" y="308" text-anchor="middle" dominant-baseline="central">Trình ký mộc</text></g>
+      <g class="n-teal"><rect x="30" y="200" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="120" y="220" text-anchor="middle" dominant-baseline="central">Process duyệt</text><text class="ts" x="120" y="240" text-anchor="middle" dominant-baseline="central">Qua các round duyệt</text></g>
+      <line x1="120" y1="256" x2="120" y2="284" class="arr" marker-end="url(#arrow2)"/>
+      <g class="n-green"><rect x="30" y="286" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="120" y="308" text-anchor="middle" dominant-baseline="central">Trình ký mộc</text></g>
 
-      <g class="n-amber"><rect x="430" y="200" width="220" height="44" rx="8" stroke-width="0.5"/><text class="th" x="540" y="222" text-anchor="middle" dominant-baseline="central">Agency chịu chờ?</text></g>
-      <path d="M540 244 L540 268 L390 268 L390 288" class="arr" marker-end="url(#arrow2)"/>
-      <path d="M540 244 L540 268 L590 268 L590 288" class="arr" marker-end="url(#arrow2)"/>
-      <text class="label-text" x="465" y="262" text-anchor="middle">Có</text>
-      <text class="label-text" x="605" y="284" text-anchor="start">Không</text>
+      <g class="n-amber"><rect x="450" y="200" width="220" height="44" rx="8" stroke-width="0.5"/><text class="th" x="560" y="222" text-anchor="middle" dominant-baseline="central">Agency chịu chờ?</text></g>
+      <path d="M560 244 L560 268 L400 268 L400 288" class="arr" marker-end="url(#arrow2)"/>
+      <path d="M560 244 L560 268 L610 268 L610 288" class="arr" marker-end="url(#arrow2)"/>
+      <text class="label-text" x="480" y="262" text-anchor="middle">Có</text>
+      <text class="label-text" x="624" y="284" text-anchor="start">Không</text>
 
-      <g class="n-blue"><rect x="300" y="288" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="390" y="308" text-anchor="middle" dominant-baseline="central">Buy time</text><text class="ts" x="390" y="328" text-anchor="middle" dominant-baseline="central">Bản ký nháy / mail</text></g>
-      <line x1="390" y1="344" x2="390" y2="372" class="arr" marker-end="url(#arrow2)"/>
-      <g class="n-green"><rect x="300" y="374" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="390" y="396" text-anchor="middle" dominant-baseline="central">Hoàn tất trình ký</text></g>
+      <g class="n-blue"><rect x="310" y="290" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="400" y="310" text-anchor="middle" dominant-baseline="central">Buy time</text><text class="ts" x="400" y="330" text-anchor="middle" dominant-baseline="central">Bản ký nháy / mail</text></g>
+      <line x1="400" y1="346" x2="400" y2="374" class="arr" marker-end="url(#arrow2)"/>
+      <g class="n-green"><rect x="310" y="376" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="400" y="398" text-anchor="middle" dominant-baseline="central">Hoàn tất trình ký</text></g>
 
-      <g class="n-coral"><rect x="500" y="288" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="590" y="308" text-anchor="middle" dominant-baseline="central">PIC mail DH</text><text class="ts" x="590" y="328" text-anchor="middle" dominant-baseline="central">Giải trình lý do</text></g>
-      <line x1="590" y1="344" x2="590" y2="372" class="arr" marker-end="url(#arrow2)"/>
-      <g class="n-gray"><rect x="500" y="374" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="590" y="396" text-anchor="middle" dominant-baseline="central">→ Quy trình ký gấp</text></g>
+      <g class="n-coral"><rect x="520" y="290" width="180" height="56" rx="8" stroke-width="0.5"/><text class="th" x="610" y="310" text-anchor="middle" dominant-baseline="central">PIC mail DH</text><text class="ts" x="610" y="330" text-anchor="middle" dominant-baseline="central">Giải trình lý do</text></g>
+      <line x1="610" y1="346" x2="610" y2="374" class="arr" marker-end="url(#arrow2)"/>
+      <g class="n-gray"><rect x="520" y="376" width="180" height="44" rx="8" stroke-width="0.5"/><text class="th" x="610" y="398" text-anchor="middle" dominant-baseline="central">→ Quy trình ký gấp</text></g>
     </svg>
   </div>
 
@@ -338,8 +325,8 @@
   <div class="principle">
     <div class="principle-num">1</div>
     <div class="principle-body">
-      <div class="principle-title">Timeline tối thiểu 7 ngày</div>
-      Phải gửi HĐ trước <strong>≥ 7 ngày</strong> so với ngày cần thực hiện. Đủ thời gian cho các round <strong>DH → FPA → FA → FA CA → LG</strong> duyệt, vẫn còn buffer cho trình ký - đóng mộc.
+      <div class="principle-title">Timeline tối thiểu 10 ngày</div>
+      Phải gửi HĐ trước <strong>≥ 10 ngày</strong> so với ngày cần thực hiện. Đủ thời gian cho các round <strong>DH → FPA → FA → FA CA → LG</strong> duyệt, vẫn còn buffer cho trình ký - đóng mộc.
     </div>
   </div>
 
@@ -357,8 +344,8 @@
   <div class="principle">
     <div class="principle-num">3</div>
     <div class="principle-body">
-      <div class="principle-title">Duyệt kịp HĐ nhưng chưa kịp ký nháy legal</div>
-      Đưa agency bản ký nháy cho họ ký trước để <em>buy time</em>, hoặc viết mail confirm nếu agency khó.
+      <div class="principle-title">Đã duyệt hợp đồng có ký nháy của Legal nhưng chưa kịp trình ký</div>
+      Đưa agency bản có ký nháy của Legal cho họ ký trước để <em>buy time</em>, hoặc viết mail confirm nếu agency khó.
     </div>
   </div>
 
@@ -366,7 +353,7 @@
     <div class="principle-num">4</div>
     <div class="principle-body">
       <div class="principle-title">Agency không chịu chờ (risk break deal)</div>
-      Nếu agency cứng — đòi phải ký HĐ mới thực hiện job — PIC viết mail dí DH giải trình → quay về luồng <strong>"Cần Anh Kelly ký gấp"</strong> ở sơ đồ 1.
+      Nếu agency cứng — đòi phải ký HĐ mới thực hiện job — PIC viết mail cho DH để giải trình → quay về luồng <strong>"Cần Anh Kelly ký gấp"</strong> ở sơ đồ 1.
     </div>
   </div>
 </section>
